@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,¬ initial-scale=1.0" />
+    <script defer src="../script/signup.js"></script>
+    <link rel="stylesheet" href="../style/signup.css" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <main class="wrappper">
+      <section class="loginWrap">
+        <header class="loginTitle">
+          <div class="logo">
+            <img src="/asset/img/google.svg" alt="google" />
+          </div>
+          <div class="title">Google 계정 만들기</div>
+          <div class="info">회원님의 정보를 입력하세요.</div>
+        </header>
+        <div class="loginInfo">
+          <form class="input-group" action="#" method="get">
+            <div class="name">
+              <input
+                class="firstName"
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="성"
+                required
+              />
+              <input
+                class="username"
+                type="text"
+                id="username"
+                name="username"
+                placeholder="이름"
+                required
+              />
+            </div>
+            <input
+              class="email"
+              type="text"
+              id="email"
+              name="email"
+              placeholder="이메일"
+              required
+            />
+            <div id="emailMessage" class="emailMessage"></div>
+            <div class="userPassword">
+              <div class="passwordWrap">
+                <input
+                  class="password"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="비밀번호"
+                  required
+                />
+                <div id="passwordMessage" class="passwordMessage"></div>
+              </div>
+              <div class="passwordCheckWrap">
+                <input
+                  class="passwordCheck"
+                  type="password"
+                  id="passwordCheck"
+                  name="passwordCheck"
+                  placeholder="비밀번호 확인"
+                  required
+                />
+                <div
+                  id="passwordCheckMessage"
+                  class="passwordCheckMessage"
+                ></div>
+              </div>
+            </div>
+          </form>
+          <div class="button">
+            <a href="./login.html">
+              <input type="submit" value="로그인하러가기" class="makeMail"
+            /></a>
+            <a href="./signupsuc.html">
+              <input type="submit" value="다음" class="nextButton"
+            /></a>
+          </div>
+        </div>
+      </section>
+      <div class="footer">
+        <select id="language" name="language" class="language">
+          <option value="ko">한국어</option>
+          <option value="en">영어</option>
+          <option value="fr">일본어</option>
+        </select>
+        <div class="information">개인정보처리방침</div>
+      </div>
+    </main>
+  </body>
+</html>

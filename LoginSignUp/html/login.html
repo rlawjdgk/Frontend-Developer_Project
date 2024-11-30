@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="../script/login.js"></script>
+    <link rel="stylesheet" href="../style/login.css" />
+    <title>LoginPage</title>
+  </head>
+  <body>
+    <main class="wrappper">
+      <section class="loginWrap">
+        <header class="loginTitle">
+          <div class="logo">
+            <img src="../asset/img/google.png" alt="googleLogo" />
+          </div>
+          <div class="title">로그인</div>
+          <div class="gamil">Gmail로 이동</div>
+        </header>
+        <form class="input-group" action="#" method="get">
+          <input
+            class="input"
+            type="text"
+            id="username"
+            name="username"
+            required
+          />
+          <label class="label" for="username">이메일 또는 전화번호</label>
+        </form>
+        <div class="mailFind">이메일을 잊으셨나요?</div>
+        <div class="helpText">
+          내 컴퓨터가 아닌가요? 로그인 후 사용이 끝나면 반드시 계정을
+          로그아웃하세요.
+        </div>
+        <div class="button">
+          <a href="./signup.html">
+            <input type="submit" value="계정만들기" class="makeMail"
+          /></a>
+          <a href="/html/password.html">
+            <input type="submit" value="다음" class="nextButton"
+          /></a>
+        </div>
+      </section>
+      <div class="footer">
+        <select id="language" name="language" class="language">
+          <option value="ko">한국어</option>
+          <option value="en">영어</option>
+          <option value="fr">일본어</option>
+        </select>
+        <div class="information">개인정보처리방침</div>
+      </div>
+    </main>
+  </body>
+</html>

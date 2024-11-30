@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="../script/welcome.js"></script>
+    <link rel="stylesheet" href="../style/welcome.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>welcome</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <section class="welcomeSection">
+        <header class="header">
+          <img src="../asset/img/google.png" alt="googleLogo" />
+        </header>
+        <p>
+          <span><i class="fa-regular fa-circle-check"></i></span>로그인 성공
+        </p>
+        <div class="identity">
+          <input type="checkbox" class="checkbox" />
+          <span>본인인증 하기</span>
+          <p><i class="fa-solid fa-chevron-right"></i></p>
+        </div>
+        <div class="buttons">
+          <button
+            onclick="location.href='https://www.google.com/webhp?hl=ko&sa=X&ved=0ahUKEwis7qiBxvSJAxV_lK8BHZppOnQQPAgI'"
+          >
+            홈
+          </button>
+          <button onclick="location.href='#'">설정</button>
+          <button onclick="logout()">로그아웃</button>
+        </div>
+      </section>
+      <footer class="footer">
+        <p>계정 안전을 위해 <a href="#">보안 설정</a>을 확인하세요.</p>
+      </footer>
+    </main>
+  </body>
+</html>

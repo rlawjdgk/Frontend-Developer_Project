@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.wrappper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  height: 100vh;
+  .loginWrap {
+    display: flex;
+    margin-bottom: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    height: 50%;
+    background-color: white;
+    border-radius: 8px;
+    .loginTitle {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      .logo {
+        img {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 15px;
+        }
+      }
+      .title {
+        margin-bottom: 20px;
+        font-size: 30px;
+      }
+      .info {
+        font-size: 16px;
+      }
+    }
+    .loginInfo {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        input {
+          padding: 10px;
+          outline: none;
+          border: 1px solid #9e9e9e;
+          border-radius: 5px;
+        }
+        .name {
+          width: 100%;
+          height: 40px;
+          display: flex;
+          margin-bottom: 30px;
+          .firstName {
+            margin-right: 20px;
+          }
+        }
+        .email {
+          width: 70%;
+        }
+        .emailMessage {
+          font-size: 0.9em;
+          color: red;
+          margin-top: 5px;
+          margin-bottom: 30px;
+        }
+        .emailMessage.valid {
+          color: green;
+        }
+        .userPassword {
+          display: flex;
+          margin-bottom: 50px;
+          .passwordWrap {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            .password {
+              margin-right: 10px;
+            }
+            .passwordMessage {
+              font-size: 14px;
+              color: red;
+              margin-top: 5px;
+            }
+            .passwordMessage.valid {
+              color: green;
+            }
+          }
+          .passwordCheckWrap {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            .passwordCheckMessage {
+              font-size: 14px;
+              color: red;
+              margin-top: 5px;
+            }
+            .passwordCheckMessage.valid {
+              color: green;
+            }
+          }
+        }
+      }
+      .button {
+        display: flex;
+        justify-content: space-between;
+        .makeMail {
+          border: none;
+          background: none;
+          color: #2196f3;
+          cursor: pointer;
+        }
+        .nextButton {
+          padding: 8px 20px;
+          border: none;
+          background: #1d73e9;
+          color: white;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+
+    .language {
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 14px;
+      color: #565656;
+      cursor: pointer;
+    }
+
+    .information {
+      font-size: 14px;
+      color: #565656;
+    }
+  }
+}
