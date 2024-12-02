@@ -4,7 +4,7 @@ function logout() {
   // 이 예시에서는 단순히 로그아웃 후 홈 페이지로 이동
   alert("로그아웃 되었습니다.");
   // 세션 종료 또는 로컬 스토리지 클리어 코드 추가 가능
-  window.location.href = "/index"; // 로그인 페이지로 리디렉션
+  window.location.href = "/index.html"; // 로그인 페이지로 리디렉션
 }
 
 // 로그인 사용자 정보
