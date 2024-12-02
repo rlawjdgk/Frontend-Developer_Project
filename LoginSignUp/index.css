@@ -109,6 +109,9 @@ body {
     color: #888;
     transition: color 0.3s ease-in-out;
     cursor: pointer;
+    &:hover {
+      border-bottom: 1px solid #888;
+    }
   }
 
   .input:focus + .mailFind {
