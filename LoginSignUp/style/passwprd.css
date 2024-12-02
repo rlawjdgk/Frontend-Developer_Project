@@ -60,6 +60,7 @@ body {
     .gamil {
       margin-bottom: 20px;
       font-size: 14px;
+      cursor: pointer;
     }
   }
 
@@ -107,6 +108,7 @@ body {
     font-size: 14px;
     color: #888;
     transition: color 0.3s ease-in-out;
+    cursor: pointer;
   }
 
   .input:focus + .mailFind {
