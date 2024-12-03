@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -18,12 +19,41 @@ body {
   width: 100%;
 }
 
+.wrapper .miniHeader {
+  overflow: hidden; /* 배너가 화면 밖으로 나가지 않게 */
+  background: #edf1f5;
+}
+.wrapper .miniHeader .banner {
+  width: 100%;
+  display: flex;
+  animation: scroll 30s linear infinite;
+  padding: 5px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .miniHeader .banner .bannerItem {
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(70%);
+  }
+  to {
+    transform: translateX(-60%);
+  }
+}
 .wrapper header {
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 .wrapper header .headerWrap {
   display: flex;
@@ -50,27 +80,86 @@ body {
 .wrapper header .headerWrap .search span {
   font-size: 14px;
   position: absolute;
-  left: 32%;
-  top: 5.4%;
+  left: 37.5%;
+  top: 9.9%;
   color: #9e9e9e;
 }
-.wrapper header .menu ul {
+.wrapper header .menu {
   display: flex;
-  gap: 10px;
-  margin-right: 10px;
 }
-.wrapper header .menu ul li {
-  cursor: pointer;
+.wrapper header .menu .login {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  font-size: 16px;
   padding: 8px 10px;
 }
-.wrapper header .menu ul li:hover {
-  background: #dfe5ed;
-  border-radius: 5px;
+.wrapper header .menu .login span {
+  margin-right: 5px;
 }
-.wrapper .mainimg {
+.wrapper header .menu .login:hover {
+  background: #edf1f5;
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+.wrapper header .menu .bookMark {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  font-size: 16px;
+  padding: 8px 10px;
+}
+.wrapper header .menu .bookMark span {
+  margin-right: 5px;
+}
+.wrapper header .menu .bookMark:hover {
+  background: #edf1f5;
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+.wrapper .mainWrap {
+  padding: 20px 80px;
+}
+.wrapper .mainWrap .mainimg {
   display: flex;
   justify-content: center;
 }
-.wrapper .mainimg img {
+.wrapper .mainWrap .mainimg img {
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .wrapper .mainWrap .mainimg img {
+    width: 100%;
+  }
+}
+.wrapper .mainWrap .bookMenu {
+  width: 20%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  background: #013964;
+  color: #fff;
+  margin-top: 30px;
+}
+.wrapper .mainWrap .bookMenu .bookList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+.wrapper .mainWrap .bookMenu .bookList li {
+  border: 1px solid #005291;
+  border-radius: 3px;
+  display: flex;
+  margin-bottom: 20px;
+  width: 180px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+}
+.wrapper .mainWrap .bookMenu .bookList li:hover {
+  background: #fff;
+  color: #005291;
 }
