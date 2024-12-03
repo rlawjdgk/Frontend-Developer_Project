@@ -133,21 +133,21 @@ body {
   }
 }
 .wrapper .mainWrap .bookMenu {
-  width: 20%;
-  height: 350px;
   display: flex;
-  justify-content: center;
-  background: #013964;
-  color: #fff;
   margin-top: 30px;
 }
-.wrapper .mainWrap .bookMenu .bookList {
+.wrapper .mainWrap .bookMenu .bookListMenu {
+  color: #fff;
+  width: 20%;
+  height: 320px;
+  background: #013964;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 }
-.wrapper .mainWrap .bookMenu .bookList li {
+.wrapper .mainWrap .bookMenu .bookListMenu li {
   border: 1px solid #005291;
   border-radius: 3px;
   display: flex;
@@ -159,7 +159,31 @@ body {
   padding: 10px;
   font-size: 18px;
 }
-.wrapper .mainWrap .bookMenu .bookList li:hover {
+.wrapper .mainWrap .bookMenu .bookListMenu li:hover {
   background: #fff;
   color: #005291;
+}
+.wrapper .mainWrap .bookMenu #bookList {
+  display: flex;
+  border: 1px solid red;
+}
+.wrapper .mainWrap .bookMenu #bookList #bookList > div {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.wrapper .mainWrap .bookMenu #bookList #bookList > div img {
+  border: 1px solid red;
+}
+.wrapper .mainWrap .bookMenu #bookList h2 {
+  border: 1px solid red;
+  width: 70%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
 }
