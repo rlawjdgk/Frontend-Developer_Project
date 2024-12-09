@@ -250,14 +250,13 @@ header {
 
 /* Blog */
 .album {
+  background: #f8f8f8;
   padding: 100px 0;
   .album_content {
     .post_content {
       display: flex;
       width: 100%;
-      @media screen and (max-width: 770px) {
-        border: 1px solid red;
-      }
+
       .recent_post_items {
         display: flex;
         flex-direction: column;
@@ -272,35 +271,36 @@ header {
           color: #4278a1;
           text-transform: uppercase;
         }
-        .album .slider {
-          position: relative;
-          overflow: hidden;
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto;
-        }
         .postWrap {
           display: flex;
           .post_item {
             display: flex;
+            width: 100%;
             height: 100%;
             flex-direction: column;
-
             @media screen and (max-width: 770px) {
-              width: 50%;
+              flex-direction: column;
             }
             .post_image {
               overflow: hidden;
-
               img {
                 width: 200px;
                 height: 200px;
                 object-fit: cover;
+                @media screen and (max-width: 770px) {
+                  width: 80px;
+                  height: 80px;
+                  object-fit: cover;
+                }
+                @media screen and (max-width: 390px) {
+                  width: 300px;
+                  height: 300px;
+                  object-fit: cover;
+                }
               }
             }
             .post_desc {
               h3 {
-                /* border: 1px solid red; */
                 margin-bottom: 10px;
                 font-size: 24px;
                 text-transform: uppercase;
@@ -310,7 +310,7 @@ header {
                 font-size: 14px;
                 line-height: 1.4rem;
                 @media screen and (max-width: 770px) {
-                  width: 350px;
+                  width: 80%;
                 }
                 span {
                   display: block;
@@ -482,6 +482,24 @@ footer {
     .member_content {
       h2 {
         font-size: 24px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    .album_content .recent_post_items .postWrap {
+      .post_item {
+        flex: 0 0 100%;
+      }
+    }
+    .slick-slider {
+      .slick-arrow {
+        &.slick-prev {
+          left: 5px;
+        }
+        &.slick-next {
+          right: 5px;
+        }
       }
     }
   }

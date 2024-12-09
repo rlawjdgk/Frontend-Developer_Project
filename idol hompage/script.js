@@ -70,53 +70,32 @@ $(".gototop, .gnb a").click(function () {
   $.scrollTo(this.hash || 0, 800);
 });
 
-const sliderWrap = document.querySelector(".slider_wrap");
-const slides = document.querySelectorAll(".slide");
-const prevButton = document.querySelector(".prev");
-const nextButton = document.querySelector(".next");
-
-let currentIndex = 0;
-
-// 슬라이드 이동 함수
-function updateSlidePosition() {
-  const offset = currentIndex * -100;
-  sliderWrap.style.transform = `translateX(${offset}%)`;
-}
-
-// 모바일에서만 슬라이드 기능 활성화
-function activateSlider() {
-  const isMobile = window.innerWidth <= 390;
-
-  if (isMobile) {
-    prevButton.addEventListener("click", handlePrevClick);
-    nextButton.addEventListener("click", handleNextClick);
-    prevButton.style.display = "block";
-    nextButton.style.display = "block";
-  } else {
-    prevButton.removeEventListener("click", handlePrevClick);
-    nextButton.removeEventListener("click", handleNextClick);
-    prevButton.style.display = "none";
-    nextButton.style.display = "none";
-    // 슬라이더 초기화
-    sliderWrap.style.transform = "translateX(0)";
-    currentIndex = 0;
+$(document).ready(function () {
+  function initSlider() {
+    if ($(window).width() <= 390) {
+      if (!$(".slider").hasClass("slick-initialized")) {
+        $(".slider").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
+          infinite: true, // 무한 반복
+          autoplay: true, // 자동 재생
+          autoplaySpeed: 3000, // 자동 재생 속도 (3초)
+        });
+      }
+    } else {
+      if ($(".slider").hasClass("slick-initialized")) {
+        $(".slider").slick("unslick");
+      }
+    }
   }
-}
 
-// 이전 버튼 동작
-function handlePrevClick() {
-  currentIndex = currentIndex > 0 ? currentIndex - 1 : slides.length - 1;
-  updateSlidePosition();
-}
+  // 초기화
+  initSlider();
 
-// 다음 버튼 동작
-function handleNextClick() {
-  currentIndex = currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
-  updateSlidePosition();
-}
-
-// 화면 크기 변경 시 슬라이더 상태 업데이트
-window.addEventListener("resize", activateSlider);
-
-// 초기 상태 설정
-activateSlider();
+  // 화면 크기 변경 감지
+  $(window).on("resize", function () {
+    initSlider();
+  });
+});
