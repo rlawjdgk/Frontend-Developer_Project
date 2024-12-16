@@ -27,7 +27,7 @@ const Nav = styled.nav`
 const Img = styled.div`
   img {
     width: 150px;
-    height: 150px;
+    height: 130px;
     object-fit: contain;
   }
 `;
