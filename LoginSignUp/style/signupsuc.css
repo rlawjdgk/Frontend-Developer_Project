@@ -24,7 +24,8 @@ body {
 
   /* 환영 메시지 섹션 */
   .welcomeSection {
-    width: 40%;
+    width: 100%;
+    max-width: 400px;
     height: 50%;
     background-color: white;
     padding: 30px;
@@ -33,6 +34,9 @@ body {
     flex-direction: column;
     margin-bottom: 15px;
     border-radius: 8px;
+    @media screen and (max-width: 390px) {
+      height: 60%;
+    }
     .header {
       img {
         width: 100px;
