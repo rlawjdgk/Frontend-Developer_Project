@@ -4,7 +4,7 @@ export const ResultData = [
     name: "철수",
     best: "ESTJ",
     desc: "회장, 부회장 등 학급 임원직에 적극적으로 도전한다. 당선된 후에는 반 아이들을 휘어잡는 경향이 있다. 입시 위주 교육, 주입식 교육, 정시(입시)의 최대 수혜자이다.",
-    image: "/img/estj.webp",
+    image: "/img/estj.jpg",
   },
   {
     id: 2,

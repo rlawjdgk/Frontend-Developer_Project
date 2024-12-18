@@ -7,13 +7,13 @@ const { Kakao } = window;
 
 const KakaoShareButton = ({ data }) => {
   // 공유할 URL 설정 (기본 URL 및 현재 페이지 URL)
-  const url = "https://catmbti02.netlify.app/"; // 공유 테스트의 메인 페이지 URL
+  const url = "https://mbtiapptest.netlify.app/"; // 공유 테스트의 메인 페이지 URL
   const resultURL = window.location.href; // 결과 페이지의 URL
 
   // Kakao SDK 초기화
   useEffect(() => {
     Kakao.cleanup(); // 기존에 초기화된 Kakao 객체 정리
-    Kakao.init("3c27913dfdf95438b5f498ce7ea0ec95"); // Kakao 앱 키로 SDK 초기화
+    Kakao.init("c6c0e958024d40e9d596734f1e0f4f5e"); // Kakao 앱 키로 SDK 초기화
   }, []);
 
   // 카카오톡 공유 기능 실행 함수
